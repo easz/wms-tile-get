@@ -46,10 +46,10 @@ $ wms-tile-get -s by_wms.json \
                -o by_dop80c
 ~~~
 
-  `-s` defines WMS server parameters.
-  `-g` defines the area(s) of interest (polygon area in geojson).
-  `-z` defines the zoom level(s) of interest.
-  `-o` defines output folder.
+  * `-s` defines WMS server parameters.
+  * `-g` defines the area(s) of interest (polygon area in geojson).
+  * `-z` defines the zoom level(s) of interest.
+  * `-o` defines output folder.
 
 An area or boundary shapes (e.g. `munich.boundary.geojson`) of named areas can be downloaded from
 [boundary.now](https://haoliangyu.github.io/boundary.now/).
@@ -63,7 +63,7 @@ $ wms-tile-get -s by_wms.json \
                -o by_dop80c
 ~~~
 
-  `-b` defines bounding box with longitudes and latitudes coordinates (i.e. EPSG:4326)
+  * `-b` defines bounding box with longitudes and latitudes coordinates (i.e. EPSG:4326)
 
 ### More example
 
@@ -118,6 +118,34 @@ $ wms-tile-get -s by_wms.json \
                -o by_dop80c
 ~~~
 
-  `-t` defines tile information input file.
+  * `-t` defines tile information input file.
 
+## WMS server definition
 
+A WMS server definition consists mainly `url` and `parameter` which is appended to url as HTTP GET method parameters.
+
+Example: `example/by_wms.json`
+
+~~~
+{
+  "url": "https://geoservices.bayern.de/wms/v2/ogc_dop80_oa.cgi",
+  "parameter": {
+    "service": "WMS",
+    "request": "GetMap",
+    "layers": "by_dop80c",
+    "styles": "",
+    "format": "image/png",
+    "transparent": true,
+    "version": "1.1.1",
+    "width": 256,
+    "height": 256,
+    "srs": "EPSG:3857",
+    "bbox": "1330615.7883883484,6124746.202434601,1340399.728008851,6134530.142055106"
+  },
+  "concurrency": 8
+}
+~~~
+
+Additional options:
+
+  * `concurrency`: the maximal number of parallel requests to the WMS server
