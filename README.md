@@ -4,14 +4,33 @@ Fetch map tiles from WMS server and store them with
 [WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) convention.
 Typically the resulting tiles should be with EPSG:3857 projection.
 
+The output structure:
+~~~
+.
+|- 10/
+|  |- 544/
+|  |  |- 354.png
+|  |  |- 355.png
+|  |- 545
+|     |- 354.png
+|     |- 355.png
+|- 11/
+|  |- ...
+|
+|- 12/
+|  |- ...
+|
+~~~
 The tool is similar to many others like [wms-tiles-downloader](https://github.com/Luqqk/wms-tiles-downloader)
-but accept also geojson polygon as an area of interest.
+but it can also accept geojson polygon as area of interest.
 
 ## Install
 
 ~~~
 $ pip install wms-tile-get
 ~~~
+
+or just execute `scripts/wms-tile-get` from the code repository
 
 ## Usage
 
