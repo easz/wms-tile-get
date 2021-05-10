@@ -1,0 +1,18 @@
+{
+  "url": "https://geoservices.bayern.de/wms/v2/ogc_dop80_oa.cgi",
+  "parameter": {
+    "service": "WMS",
+    "request": "GetMap",
+    "layers": "by_dop80c",
+    "styles": "",
+    "format": "image/png",
+    "transparent": true,
+    "version": "1.1.1",
+    "width": 256,
+    "height": 256,
+    "srs": "EPSG:3857",
+    "bbox": "1330615.7883883484,6124746.202434601,1340399.728008851,6134530.142055106"
+  },
+  "concurrency": 8
+}
+
