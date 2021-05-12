@@ -1,7 +1,7 @@
 # wms-tile-get
 
-Fetch map tiles from WMS server and store them with
-[WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) convention.
+Fetch map from WMS server and store them as tiled web map with
+[Slippy Map](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) or Google Map convention.
 Typically the resulting tiles should be with EPSG:3857 projection.
 
 The output structure:
@@ -28,7 +28,7 @@ but it can also accept geojson polygon as area of interest.
 
 ## Install
 
-On UNIX-like platforms just use `pip install`
+On Unix-like platforms just use `pip install`
 
 ~~~
 $ pip install wms-tile-get
