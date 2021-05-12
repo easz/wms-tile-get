@@ -81,7 +81,7 @@ $ wms-tile-get -s by_wms.json \
 
 ## Requirement:
 
- - Python
+ - Python3
    - requests
    - [supermercado](https://github.com/mapbox/supermercado)
    - [mercantile](https://github.com/mapbox/mercantile)
