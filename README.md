@@ -5,6 +5,7 @@ Fetch map tiles from WMS server and store them with
 Typically the resulting tiles should be with EPSG:3857 projection.
 
 The output structure:
+
 ~~~
 .
 |- 10/
@@ -21,23 +22,27 @@ The output structure:
 |  |- ...
 |
 ~~~
+
 The tool is similar to many others like [wms-tiles-downloader](https://github.com/Luqqk/wms-tiles-downloader)
 but it can also accept geojson polygon as area of interest.
 
 ## Install
 
+On UNIX-like platforms just use `pip install`
+
 ~~~
 $ pip install wms-tile-get
 ~~~
 
-or just execute `scripts/wms-tile-get` from the code repository
+The script `wms-tile-get` will be installed, otherwise `scripts/wms-tile-get` from a cloned code repository can also be run directly.
+
+On Windows please see the [instruction](Windows.md)
 
 ## Usage
 
 ### Fetch tiles for an area (e.g. a city)
 
 ~~~
-
 $ cd example/
 
 $ wms-tile-get -s by_wms.json \
