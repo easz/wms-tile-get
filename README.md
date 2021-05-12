@@ -34,8 +34,6 @@ On Unix-like platforms just use `pip install`
 $ pip install wms-tile-get
 ~~~
 
-The script `wms-tile-get` will be installed, otherwise `scripts/wms-tile-get` from a cloned code repository can also be run directly.
-
 On Windows please see the [instruction](Windows.md)
 
 ## Usage
