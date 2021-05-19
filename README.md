@@ -68,6 +68,8 @@ $ wms-tile-get -s by_wms.json \
 
   * `-b` defines bounding box with longitudes and latitudes coordinates (i.e. EPSG:4326)
 
+A bbox can be calculated [online](https://tools.geofabrik.de/calc/).
+
 ### More example
 
 fetch tiles for zoom level 1 to 5, and 10 and 13.
@@ -81,6 +83,7 @@ $ wms-tile-get -s by_wms.json \
                --force
 ~~~
 
+  * `--force` re-fetch a map tile even it already exists in the output folder
 
 ## Requirement:
 
