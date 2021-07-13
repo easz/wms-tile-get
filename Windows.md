@@ -1,8 +1,4 @@
-# Note on Windows Platform
-
-### pyenv-win
-
-It is recommended to use [pyenv-win](https://github.com/pyenv-win/pyenv-win) to install and manage different Python versions on Windows.
+# Installation with Pip on Windows Platform
 
 ### GDAL
 
