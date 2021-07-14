@@ -28,13 +28,17 @@ but it can also accept geojson polygon as area of interest.
 
 ## Install
 
-On Unix-like platforms just use `pip install`
-
 ~~~
 $ pip install wms-tile-get
 ~~~
 
-On Windows please see the [instruction](Windows.md)
+or 
+
+~~~
+$ conda install -c conda-forge wms-tile-get
+~~~
+
+Install with pip on Windows please see the [instruction](Windows.md)
 
 ## Usage
 
