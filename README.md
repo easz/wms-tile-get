@@ -1,6 +1,6 @@
 # wms-tile-get
 
-Fetch map from WMS server and store them as tiled web map with
+Fetch map from WMS server and store them as tiled web map in
 [Slippy Map](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) or Google Map convention.
 Typically the resulting tiles should be with EPSG:3857 projection.
 
@@ -32,13 +32,14 @@ but it can also accept geojson polygon as area of interest.
 $ pip install wms-tile-get
 ~~~
 
-or 
+or
 
 ~~~
 $ conda install -c conda-forge wms-tile-get
 ~~~
 
-Install with pip on Windows please see the [instruction](Windows.md)
+It is highly recommended to use [conda](https://docs.conda.io/en/latest/miniconda.html) to install on Windows platform.
+Manual installation with pip on Windows please see the [instruction](Windows.md).
 
 ## Usage
 
@@ -53,7 +54,7 @@ $ wms-tile-get -s by_wms.json \
                -o by_dop80c
 ~~~
 
-  * `-s` defines WMS server parameters.
+  * `-s` defines configuration file of WMS server parameters.
   * `-g` defines the area(s) of interest (polygon area in geojson).
   * `-z` defines the zoom level(s) of interest.
   * `-o` defines output folder.
@@ -130,7 +131,7 @@ $ wms-tile-get -s by_wms.json \
 
 ## WMS server definition
 
-A WMS server definition consists mainly `url` and `parameter` which is appended to url as HTTP GET method parameters.
+A WMS server definition consists mainly `url` and `parameter` which is appended to `url` as HTTP GET method parameters.
 
 Example: `example/by_wms.json`
 
@@ -148,11 +149,14 @@ Example: `example/by_wms.json`
     "width": 256,
     "height": 256,
     "srs": "EPSG:3857",
-    "bbox": "1330615.7883883484,6124746.202434601,1340399.728008851,6134530.142055106"
   },
   "concurrency": 8
 }
 ~~~
+
+Note:
+
+  * The parameter `bbox` of WMS request will be determined automatically.
 
 Additional options:
 
