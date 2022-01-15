@@ -1,6 +1,12 @@
 # Installation with Pip on Windows Platform
 
-### GDAL
+### Recommended way
+
+download any depending packages (which can not be built on your machine)from https://www.lfd.uci.edu/~gohlke/pythonlibs/ and install with `pip`
+
+### Alternative
+
+#### GDAL
 
  - Find the [release packages](https://www.gisinternals.com/release.php)
  - Thre are three components necessary
@@ -18,7 +24,7 @@ GDAL_VERSION     -> 3.2.2
 PATH             -> C:\Program Files\GDAL;C:\Program Files\GDAL\gdal-data;...
 ~~~
 
-### rasterio and etc
+#### rasterio and etc
 
 `rasterio` can be tricky to install.
 
