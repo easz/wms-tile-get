@@ -24,7 +24,7 @@ The output structure:
 ~~~
 
 The tool is similar to many others like [wms-tiles-downloader](https://github.com/Luqqk/wms-tiles-downloader)
-but it can also accept geojson polygon as area of interest.
+or QGIS' `gdal2xyz` but it can also accept geojson polygon as area of interest.
 
 ## Install
 
