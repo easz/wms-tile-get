@@ -2,7 +2,7 @@
 
 Fetch map from WMS server and store them as tiled web map in
 [Slippy Map](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) or Google Map convention.
-Typically the resulting tiles should be with EPSG:3857 projection.
+Typically such web map tiles have EPSG:3857 projection.
 
 The output structure:
 
@@ -24,7 +24,7 @@ The output structure:
 ~~~
 
 The tool is similar to many others like [wms-tiles-downloader](https://github.com/Luqqk/wms-tiles-downloader)
-but it can also accept geojson polygon as area of interest.
+or QGIS' `gdal2xyz` but it can also accept geojson polygon as area of interest.
 
 ## Install
 
@@ -38,8 +38,8 @@ or
 $ conda install -c conda-forge wms-tile-get
 ~~~
 
-It is highly recommended to use [conda](https://docs.conda.io/en/latest/miniconda.html) to install on Windows platform.
-Manual installation with pip on Windows please see the [instruction](Windows.md).
+It is highly recommended to use [conda](https://docs.conda.io/en/latest/miniconda.html) to install.
+Manual installation with GDAL and others on Windows please see the [instruction](Windows.md).
 
 ## Usage
 
@@ -156,7 +156,7 @@ Example: `example/by_wms.json`
 
 Note:
 
-  * The parameter `bbox` of WMS request will be determined automatically.
+  * The actual parameter `bbox` of a WMS request will be determined automatically.
 
 Additional options:
 
