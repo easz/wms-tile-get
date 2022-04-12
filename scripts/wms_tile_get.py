@@ -15,11 +15,11 @@ from functools import reduce
 
 def generate_tile_def_from_list(args_tiles):
     """
-        yield [x, y, z, minxx, miny, maxx, maxy]
+        yield [x, y, z, xmin, ymin, xmax, ymax]
 
         @param args_tiles
                 a list of tile definition files (handlers) containing
-                "x,y,z,minx,miny,maxx,maxy" tuple strings
+                "x,y,z,xmin,ymin,xmax,ymax" tuple strings
     """
     for f in args_tiles:
         with f as f:
@@ -29,7 +29,7 @@ def generate_tile_def_from_list(args_tiles):
 
 def geerate_tile_def_from_feature(features, zooms, projected):
     """
-        yield [x, y, z, minxx, miny, maxx, maxy]
+        yield [x, y, z, xmin, ymin, xmax, ymax]
 
         @param features
                a list  geojson features (i.e. polygon) objects
@@ -59,7 +59,7 @@ def geerate_tile_def_from_feature(features, zooms, projected):
 
 def generate_tile_def_from_bbox(args_bboxes, zooms, projected):
     """
-        yield [x, y, z, minxx, miny, maxx, maxy]
+        yield [x, y, z, xmin, ymin, xmax, ymax]
 
         @param args_bboxes
                 a list of bbox definitions in comma separated string
@@ -84,7 +84,7 @@ def generate_tile_def_from_bbox(args_bboxes, zooms, projected):
 
 def generate_tile_def_from_area(args_areas, zooms, projected):
     """
-        yield [x, y, z, minxx, miny, maxx, maxy]
+        yield [x, y, z, xmin, ymin, xmax, ymax]
 
         @param args_areas
                 a list of files defining polygon areas with geojson
@@ -208,7 +208,7 @@ def main():
     group1 = parser.add_argument_group(title='retrieve tiles defined explicitly')
     group1.add_argument('-t', '--tile', metavar='<CS-FILE>',
                         type=argparse.FileType('r'), nargs='+',
-                        help='Web map tile definition file with comma-separated strings: "x,y,z,minx,miny,maxx,maxy"')
+                        help='Web map tile definition file with comma-separated strings: "x,y,z,xmin,ymin,xmax,ymax"')
 
     group2 = parser.add_argument_group(title='retrieve tiles defined by area(s) and zoom level(s).',
                                        description='The area can be either defined by -b or -g. The argument -z is always required.')
